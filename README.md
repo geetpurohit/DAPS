@@ -9,8 +9,8 @@
 # Introduction
 
 When presented with a time series data, one can question about its performance in the future. A normal time series data looks like this:
-
-       Month  #Passengers
+```
+       Month  Passengers
 0    1949-01          112
 1    1949-02          118
 2    1949-03          132
@@ -23,3 +23,4 @@ When presented with a time series data, one can question about its performance i
 142  1960-11          390
 143  1960-12          432
 
+```

@@ -31,7 +31,8 @@ This project forecasts data and is divided into six steps that are all automated
 <details> 
   <summary> Fetch'n Clean </summary>    
     First we take the data and clean it up to only take values of interest. Additionally we will also index it by datetime. For our example, the data will now look like:
-    ```
+
+
        Time         Value      Region_Demarcation       Channel_Type
 0    2020-01          112           North                   Agent
 1    2020-02          118           South                   International
@@ -45,9 +46,10 @@ This project forecasts data and is divided into six steps that are all automated
 142  2022-11          390           East                    Local
 143  2022-12          432           North                   NaN
 
-```
+
     
 </details>
+
 <details> 
   <summary> CMake </summary>    
     Dlib is written in C/C++, and your computer needs to *build* the package, so you need something that can automate that build process. Head over to the download link given above and download the file that is the best for you. I recommend the .msi file since it is much easier (tip - make sure to add the Windows PATH during installation). :

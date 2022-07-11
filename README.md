@@ -10,67 +10,66 @@
 
 Time series data is a collection of observations obtained through repeated measurements over time. It generally looks like this:
 ```
-       Time         Value         Region
-0    1949-01          112         North
-1    1949-02          118         South
-2    1949-03          132         South
-3    1949-04          129         West
-4    1949-05          121         North
+       Time         Value      Region_Demarcation       Channel_Type
+0    2020-01          112           North                   Agent
+1    2020-02          118           South                   International
+2    2020-03          132           South                   Retail
+3    2020-04          129           West                    Retail
+4    2020-05          121           North                   HQ
 ..       ...          ...
-139  1960-08          606         East
-140  1960-09          508         South
-141  1960-10          461         North
-142  1960-11          390         East
-143  1960-12          432         North
+139  2022-08          606           East                    Military
+140  2022-09          508           South                   Agent
+141  2022-10          461           North                   Retail
+142  2022-11          390           East                    Local
+143  2022-12          432           North                   NaN
 
 ```
 
 # What does this program do?
-This project is divided into six steps:
+This project forecasts data and is divided into six steps that are all automated:
 
 <details> 
-  <summary> CMake </summary>    
-    Dlib is written in C/C++, and your computer needs to *build* the package, so you need something that can automate that build process. Head over to the download link given above and download the file that is the best for you. I recommend the .msi file since it is much easier (tip - make sure to add the Windows PATH during installation). :
-    
-<p align="center">
-  <img src="Cmake.png" />
-</p>
-    
-</details>
-<details> 
-  <summary> CMake </summary>    
-    Dlib is written in C/C++, and your computer needs to *build* the package, so you need something that can automate that build process. Head over to the download link given above and download the file that is the best for you. I recommend the .msi file since it is much easier (tip - make sure to add the Windows PATH during installation). :
-    
-<p align="center">
-  <img src="Cmake.png" />
-</p>
-    
-</details>
-<details> 
-  <summary> CMake </summary>    
-    Dlib is written in C/C++, and your computer needs to *build* the package, so you need something that can automate that build process. Head over to the download link given above and download the file that is the best for you. I recommend the .msi file since it is much easier (tip - make sure to add the Windows PATH during installation). :
-    
-<p align="center">
-  <img src="Cmake.png" />
-</p>
+  <summary> Fetch'n Clean </summary>    
+    First we take the data and clean it up to only take values of interest. Additionally we will also index it by datetime. For our example, the data will now look like:
+    ```
+       Time         Value      Region_Demarcation       Channel_Type
+0    2020-01          112           North                   Agent
+1    2020-02          118           South                   International
+2    2020-03          132           South                   Retail
+3    2020-04          129           West                    Retail
+4    2020-05          121           North                   HQ
+..       ...          ...
+139  2022-08          606           East                    Military
+140  2022-09          508           South                   Agent
+141  2022-10          461           North                   Retail
+142  2022-11          390           East                    Local
+143  2022-12          432           North                   NaN
+
+```
     
 </details>
 <details> 
   <summary> CMake </summary>    
     Dlib is written in C/C++, and your computer needs to *build* the package, so you need something that can automate that build process. Head over to the download link given above and download the file that is the best for you. I recommend the .msi file since it is much easier (tip - make sure to add the Windows PATH during installation). :
     
-<p align="center">
-  <img src="Cmake.png" />
-</p>
+
     
 </details>
 <details> 
   <summary> CMake </summary>    
     Dlib is written in C/C++, and your computer needs to *build* the package, so you need something that can automate that build process. Head over to the download link given above and download the file that is the best for you. I recommend the .msi file since it is much easier (tip - make sure to add the Windows PATH during installation). :
-    
-<p align="center">
-  <img src="Cmake.png" />
-</p>
+
     
 </details>
-This project takes that data and strips it to a _value_ column and a _datetime_ index column (i.e., it is indexed by datetime. 
+<details> 
+  <summary> CMake </summary>    
+    Dlib is written in C/C++, and your computer needs to *build* the package, so you need something that can automate that build process. Head over to the download link given above and download the file that is the best for you. I recommend the .msi file since it is much easier (tip - make sure to add the Windows PATH during installation). :
+
+    
+</details>
+<details> 
+  <summary> CMake </summary>    
+    Dlib is written in C/C++, and your computer needs to *build* the package, so you need something that can automate that build process. Head over to the download link given above and download the file that is the best for you. I recommend the .msi file since it is much easier (tip - make sure to add the Windows PATH during installation). :
+
+    
+</details>

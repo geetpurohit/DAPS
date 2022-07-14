@@ -35,7 +35,7 @@ Time series data is a collection of observations obtained through repeated measu
 This project forecasts data and is divided into six steps that are all automated:
 
 <details> 
-  <summary> Fetch'n Clean </summary>    
+  <summary> ETL </summary>    
     First we take the data and clean it up to only take values of interest. Additionally we will also index it by datetime. For our example, the data will now look like:
 <pre>
 <code>

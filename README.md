@@ -1,12 +1,13 @@
 <H1 align="center">
-    Automated Feature Enigneering and Forecasting?
+    D. A. P. S.
 </H1>
 
 <H5 align="center">
-    An automated predictive analytics algorithm that can feature engineer using TSFresh and forecast using SKLearn Gradient Boosting.
+     An automated pipeline that can load a database and perform data-drift analysis, visualize EDA/ETL insights, perform
+time-series feature engineering, train an SKLearn machine learning model, and forecast data.
 </H5>
 
-# Introduction
+# Introduction 
 
 Time series data is a collection of observations obtained through repeated measurements over time. It generally looks like this:
 ```
@@ -55,7 +56,6 @@ This project forecasts data and is divided into six steps that are all automated
   <summary> Make Forecasting Frame </summary>    
     Next, we take the time series and using TSFresh's inbuilt feature to roll a time series, we make a forecasting frame. At this point our forecasting frame looks like this:
     
-
     
 </details>
 <details> 

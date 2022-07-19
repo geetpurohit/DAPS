@@ -87,6 +87,7 @@ This pipeline forecasts data and is divided into six steps that are all automate
   <details> 
   <summary> Forecasting </summary>    
     Lastly we use the trained machine learning model for predictive analysis. Since D.A.P.S. is open source and free (and always will be), it uses the SKLearn modelling feature to predict data based on previous data. A rough high level overview of Training and Forecasting is as follows:
+
 Step 1)  We append an empty row
       
       
@@ -108,10 +109,12 @@ Step 1)  We append an empty row
     </code>
 </pre>
       
-     Step 2) Split it into train and test like so:
       
-      Train
-            <pre>
+Step 2) Split it into train and test like so:
+      
+Train
+      
+<pre>
 <code>
                     Value 
  Datetime Index       
@@ -128,8 +131,10 @@ Step 1)  We append an empty row
     </code>
 </pre>
       
-      Test
-            <pre>
+Test
+      
+      
+<pre>
 <code>
                     Value 
  Datetime Index       

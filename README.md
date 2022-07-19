@@ -34,9 +34,9 @@ Time series data is a collection of observations obtained through repeated measu
 # What does this pipeline do?
 This pipeline forecasts data and is divided into six steps that are all automated:
 
-<details> 
-  <summary> ETL </summary>    
-    First we take the data and clean it up to only take values of interest. Additionally we will also index it by datetime. For our example, the data will now look like (this data below only has 1 column. Do you understand why?):
+# ETL  
+
+First we take the data and clean it up to only take values of interest. Additionally we will also index it by datetime. For our example, the data will now look like (this data below only has 1 column. Do you understand why?):
 <pre>
 <code>
                     Value 

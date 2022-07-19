@@ -112,9 +112,11 @@ Train
       
 <pre>
 <code>
-                    Value 
- Datetime Index       
-    2020-01          112  
+
+Train Data:                                                  Test Data
+                    Value                                                         Value 
+ Datetime Index                                               Datetime Index
+    2020-01          112                                          2023-01          ' '
     2020-02          118  
     2020-03          132  
     2020-04          129  
@@ -126,17 +128,7 @@ Train
     2022-11          390  
     </code>
 </pre>
-      
-Test
-      
-      
-<pre>
-<code>
-                    Value 
- Datetime Index       
-    2023-01          ' '
-    </code>
-</pre>
+
 
 
 Step 3) After training the model using the target vectors (this pipeline uses a forecasting frame from TSFresh), predict the data for the newly appended row to get:

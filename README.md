@@ -27,7 +27,7 @@ Time series data is a collection of observations obtained through repeated measu
 140  2022-09          508           South                   Agent
 141  2022-10          461           North                   Retail
 142  2022-11          390           East                    Local
-143  2022-12          432           North                   NaN
+143  2022-12          ' '            North                   NaN
 
 ```
 

@@ -8,7 +8,7 @@
 </H5>
 
 <H5 align="center">
-     An automated pipeline that can load a database and perform data-drift analysis, visualize EDA/ETL insights, perform
+     An automated pipeline that can load a time series-esque database and perform data-drift analysis, visualize EDA/ETL insights, perform
 time-series feature engineering, train an SKLearn machine learning model, and forecast data.
 </H5>
 

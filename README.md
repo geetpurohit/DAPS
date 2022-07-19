@@ -84,72 +84,24 @@ Now that we have performed feature engineering, we can leverage the features and
 # Forecasting 
 Lastly we use the trained machine learning model for predictive analysis. Since D.A.P.S. is open source and free (and always will be), it uses the SKLearn modelling feature to predict data based on previous data. A rough high level overview of Training and Forecasting is as follows:
 
-Step 1)  We append an empty row
-      
-      
-<pre>
-<code>
-                    Value 
- Datetime Index       
-    2020-01          112  
-    2020-02          118  
-    2020-03          132  
-    2020-04          129  
-    2020-05          121  
-      ...            ...
-    2022-08          606  
-    2022-09          508  
-    2022-10          461  
-    2022-11          390  
-    2023-01          ' '
-    </code>
-</pre>
-      
-      
-Step 2) Split it into train and test like so:
-      
-Train
-      
 <pre>
 <code>
 
-             Train Data:                                                  Test Data:
-             
-             
-                    Value                                                         Value 
- Datetime Index                                               Datetime Index
-    2020-01          112                    |                     2023-01          ' '
-    2020-02          118                    | 
-    2020-03          132                    | 
-    2020-04          129                    | 
-    2020-05          121                    | 
-      ...            ...                    |
-    2022-08          606                    | 
-    2022-09          508                    | 
-    2022-10          461                    | 
-    2022-11          390                    | 
-    </code> |                  
+             Train Data:                            Test Data:                              End Result
+    
+    
+                    Value                                   Value                                       Value
+ Datetime Index                         Datetime Index                              Datetime Index
+    2020-01          112       |            2023-01          ' '    |                  2020-01           112
+    2020-02          118       |                                    |                  2020-02           118            
+    2020-03          132       |                                    |                  2020-03           132              
+    2020-04          129       |                                    |                  2020-04           129              
+    2020-05          121       |                                    |                  2020-05           121              
+      ...            ...       |                                    |   ------->         ...
+    2022-08          606       |                                    |                  2022-08           606              
+    2022-09          508       |                                    |                  2022-09           508              
+    2022-10          461       |                                    |                  2022-10           461               
+    2022-11          390       |                                    |                  2022-11           390
+                                                                                       2023-01           ???
+    </code>                                                 
 </pre>
-
-
-
-Step 3) After training the model using the target vectors (this pipeline uses a forecasting frame from TSFresh), predict the data for the newly appended row to get:
-      
-<pre>
-<code>
-                    Value 
- Datetime Index       
-    2020-01          112  
-    2020-02          118  
-    2020-03          132  
-    2020-04          129  
-    2020-05          121  
-      ...            ...
-    2022-08          606  
-    2022-09          508  
-    2022-10          461  
-    2022-11          390  
-    2023-01          predicted integer
-    </code>
-</pre>
-

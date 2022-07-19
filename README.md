@@ -64,6 +64,7 @@ This pipeline forecasts data and is divided into six steps that are all automate
     <add DTale gif>
     
     
+</details> 
 <details> 
   <summary> Stability Monitoring </summary>    
     When we perform analysis on data, it is important that we understand how stable our data is. If we don't account for shifts over time, our forecasting models will not be able to capture variance from new potential market factors, and will eventually degrade in performance. The traditional way of checking for data drfit is tedious and time consuming. So we make the process more efficient and faster using Popmon, a package that generates interactable report analyzing shifts in data over time. The automatic creation of plots within the D.A.P.S. pipeline significantly reduces the amount of time needed to manually generate these plots by over 90% from the 30 minutes it typically takes. Population monitoring to ensure stability is automated in the D.A.P.S. piepline as shown below:

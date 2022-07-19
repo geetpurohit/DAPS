@@ -135,9 +135,11 @@ This pipeline forecasts data and is divided into six steps that are all automate
     2023-01          ' '
     </code>
 </pre>
-      Step 3) After training the model using the target vectors (this pipeline uses a forecasting frame from TSFresh), predict the data for the newly appended row to get:
+
+
+Step 3) After training the model using the target vectors (this pipeline uses a forecasting frame from TSFresh), predict the data for the newly appended row to get:
       
-            <pre>
+<pre>
 <code>
                     Value 
  Datetime Index       
@@ -154,4 +156,5 @@ This pipeline forecasts data and is divided into six steps that are all automate
     2023-01          predicted integer
     </code>
 </pre>
+      
 </details>

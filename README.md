@@ -34,7 +34,7 @@ Time series data is a collection of observations obtained through repeated measu
 # What does this pipeline do?
 This pipeline forecasts data and is divided into six steps that are all automated:
 
-# ETL  
+# Extract Transport Load (ETL)  
 
 First we take the data and clean it up to only take values of interest. Additionally we will also index it by datetime. For our example, the data will now look like (this data below only has 1 column. Do you understand why?):
 <pre>
@@ -55,38 +55,34 @@ First we take the data and clean it up to only take values of interest. Addition
     </code>
 </pre>
     
-</details>
 
-<details> 
-  <summary> EDA </summary>    
-    Now that we have the ETL process completed and streamlined the procees to convert the time series data into a DateTime indexed VoI (value of interest) series, we will now perform Exploratory Data Analysis. For this, the automated pipeline uses two tools. DTale, and Pandas-Profiling. These tools have graphical interfaces that makes data visualization easy and intuitive. Using these two tools, you can automatically create reports that have correlations (if multi-columnar data), distributions, interactions, missing values report, across all the different VoIs within a dataset. DTale helps expedite the manual codding for each visualization to make the proces about 10-20x faster from the 25-30 minutes it typically takes to code each visual. These tools are state-of-the-art free alternatives to expensive tools such as Tableau. All of this is automated in the D.A.P.S. pipeline as shown below:
+# Exploratory Data Analysis (EDA)  
+
+Now that we have the ETL process completed and streamlined the procees to convert the time series data into a DateTime indexed VoI (value of interest) series, we will now perform Exploratory Data Analysis. For this, the automated pipeline uses two tools. DTale, and Pandas-Profiling. These tools have graphical interfaces that makes data visualization easy and intuitive. Using these two tools, you can automatically create reports that have correlations (if multi-columnar data), distributions, interactions, missing values report, across all the different VoIs within a dataset. DTale helps expedite the manual codding for each visualization to make the proces about 10-20x faster from the 25-30 minutes it typically takes to code each visual. These tools are state-of-the-art free alternatives to expensive tools such as Tableau. All of this is automated in the D.A.P.S. pipeline as shown below:
     
     <add DTale gif>
     
     
-</details> 
-<details> 
-  <summary> Stability Monitoring </summary>    
-    When we perform analysis on data, it is important that we understand how stable our data is. If we don't account for shifts over time, our forecasting models will not be able to capture variance from new potential market factors, and will eventually degrade in performance. The traditional way of checking for data drfit is tedious and time consuming. So we make the process more efficient and faster using Popmon, a package that generates interactable report analyzing shifts in data over time. The automatic creation of plots within the D.A.P.S. pipeline significantly reduces the amount of time needed to manually generate these plots by over 90% from the 30 minutes it typically takes. Population monitoring to ensure stability is automated in the D.A.P.S. piepline as shown below:
+
+# Stability Monitoring  
+When we perform analysis on data, it is important that we understand how stable our data is. If we don't account for shifts over time, our forecasting models will not be able to capture variance from new potential market factors, and will eventually degrade in performance. The traditional way of checking for data drfit is tedious and time consuming. So we make the process more efficient and faster using Popmon, a package that generates interactable report analyzing shifts in data over time. The automatic creation of plots within the D.A.P.S. pipeline significantly reduces the amount of time needed to manually generate these plots by over 90% from the 30 minutes it typically takes. Population monitoring to ensure stability is automated in the D.A.P.S. piepline as shown below:
     <add Popmon gif here>
 
     
-</details>
-<details> 
-  <summary> Feature Engineering </summary>    
-    With stable data and the EDA completed, we next set our eyes on automating feature engineering from a time series. Basic features such as the mean or the median are normally derived through programming, which is great when looking at the entirety of a data set. However, when looking at a time series and forecasting, we care about features over multiple windows of time, which makes recalculating something as simple as the mean over and over again inefficient. To solve this issue and automate this entirely, we use TSFresh. With TSFresh, the feature enginerring process can be done instantaneously, making the process about 9 times faster from the 45 minutes it took me to extract similar features manually.
+# Feature Engineering 
+With stable data and the EDA completed, we next set our eyes on automating feature engineering from a time series. Basic features such as the mean or the median are normally derived through programming, which is great when looking at the entirety of a data set. However, when looking at a time series and forecasting, we care about features over multiple windows of time, which makes recalculating something as simple as the mean over and over again inefficient. To solve this issue and automate this entirely, we use TSFresh. With TSFresh, the feature enginerring process can be done instantaneously, making the process about 9 times faster from the 45 minutes it took me to extract similar features manually.
     <add TSFresh Gif>
-    
-</details>
-<details> 
-  <summary> Training Machine Learning Models </summary>    
-    Now that we have performed feature engineering, we can leverage the features and train models for predictive analysis. We can use an automatic process that integrates the features calculated in the pipeline and pass it off to an automated function. This function splits the data into test/train. This means we no longer have to manually upload or download data.  :
+
+        
+        
+# Machine Learning
+
+        
+Now that we have performed feature engineering, we can leverage the features and train models for predictive analysis. We can use an automatic process that integrates the features calculated in the pipeline and pass it off to an automated function. This function splits the data into test/train. This means we no longer have to manually upload or download data.  :
  <add machine learning gif>
     
-</details>
-  <details> 
-  <summary> Forecasting </summary>    
-    Lastly we use the trained machine learning model for predictive analysis. Since D.A.P.S. is open source and free (and always will be), it uses the SKLearn modelling feature to predict data based on previous data. A rough high level overview of Training and Forecasting is as follows:
+# Forecasting 
+Lastly we use the trained machine learning model for predictive analysis. Since D.A.P.S. is open source and free (and always will be), it uses the SKLearn modelling feature to predict data based on previous data. A rough high level overview of Training and Forecasting is as follows:
 
 Step 1)  We append an empty row
       
@@ -162,5 +158,4 @@ Step 3) After training the model using the target vectors (this pipeline uses a 
     2023-01          predicted integer
     </code>
 </pre>
-      
-</details>
+

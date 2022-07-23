@@ -60,7 +60,11 @@ First we take the data and clean it up to only take values of interest. Addition
 
 Now that we have the ETL process completed and streamlined the procees to convert the time series data into a DateTime indexed VoI (value of interest) series, we will now perform Exploratory Data Analysis. For this, the automated pipeline uses two tools. DTale, and Pandas-Profiling. These tools have graphical interfaces that makes data visualization easy and intuitive. Using these two tools, you can automatically create reports that have correlations (if multi-columnar data), distributions, interactions, missing values report, across all the different VoIs within a dataset. DTale helps expedite the manual coding for each visualization to make the proces about 10-20x faster from the 25-30 minutes it typically takes to code each visual. These tools are state-of-the-art free alternatives to expensive tools such as Tableau. All of this is automated in the D.A.P.S. pipeline as shown below:
     
-    <add DTale gif>
+
+https://user-images.githubusercontent.com/68968629/180626086-7c5849cb-1b07-4f10-9126-f95b02545f03.mp4
+
+
+    
     
     
 

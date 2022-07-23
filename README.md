@@ -70,13 +70,13 @@ https://user-images.githubusercontent.com/68968629/180626086-7c5849cb-1b07-4f10-
 
 # Stability Monitoring  
 When we perform analysis on data, it is important that we understand how stable our data is. If we don't account for shifts over time, our forecasting models will not be able to capture variance from new potential market factors, and will eventually degrade in performance. The traditional way of checking for data drfit is tedious and time consuming. So we make the process more efficient and faster using Popmon, a package that generates interactable report analyzing shifts in data over time. The automatic creation of plots within the D.A.P.S. pipeline significantly reduces the amount of time needed to manually generate these plots by over 90% from the 30 minutes it typically takes. Population monitoring to ensure stability is automated in the D.A.P.S. piepline as shown below:
-    <add Popmon gif here>
+
+https://user-images.githubusercontent.com/68968629/180626286-9c572539-d4a0-4cac-9f67-91faf87a4574.mp4
 
     
 # Feature Engineering 
 With stable data and the EDA completed, we next set our eyes on automating feature engineering from a time series. Basic features such as the mean or the median are normally derived through programming, which is great when looking at the entirety of a data set. However, when looking at a time series and forecasting, we care about features over multiple windows of time, which makes recalculating something as simple as the mean over and over again inefficient. To solve this issue and automate this entirely, we use TSFresh. With TSFresh, the feature enginerring process can be done instantaneously, making the process about 9 times faster from the 45 minutes it took me to extract similar features manually.
     <add TSFresh Gif>
-
         
         
 # Machine Learning

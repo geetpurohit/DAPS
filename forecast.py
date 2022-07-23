@@ -31,9 +31,14 @@ def roll_and_extract(df, date, datetime):
     df.loc[pd.to_datetime(date), datetime] = ''
     df_shift, y = make_forecasting_frame(df[datetime], kind = 'Passenger Count', max_timeshift=6, rolling_direction=1)
     df_shift['value'] = [float(i)for i in df_shift['value']]
+    print(df_shift)
+    print('')
+    print(y)
     extracted_features = extract_features(df_shift, column_id = 'id', column_sort = 'time', column_value = 'value', impute_function=impute, n_jobs=7)
     extracted_features.dropna(axis = 1, how = 'all', thresh = None, subset = None, inplace = True)
     extracted_features = extracted_features.loc[:, extracted_features.any()] #drop 0 columns
+    print('')
+    print(extracted_features)
     return extracted_features, y
 
 def add_dummy(df):
@@ -137,7 +142,8 @@ def makegif():
 
 if __name__ == "__main__":
     df = pd.read_csv("AirPassengers.xls")
+    #print(df)
     df = clean(df, 'Month', '#Passengers')
-    #df2 = forecast(df, 2)
+    df2 = forecast(df, 2)
     #print(df2)
-    makegif()
+    #makegif()

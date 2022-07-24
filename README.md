@@ -10,7 +10,8 @@
 <H5 align="center">
      An automated pipeline that can load a time series-esque database and perform data-drift analysis, visualize EDA/ETL insights, perform
 time-series feature engineering, train an SKLearn machine learning model, and forecast data.
-</H5>
+</H5>![Untitled Diagram drawio(1)](https://user-images.githubusercontent.com/68968629/180628463-e09048af-07e2-459e-88e3-8d39888cabfb.png)
+
 
 # Introduction 
 
@@ -32,7 +33,7 @@ Time series data is a collection of observations obtained through repeated measu
 ```
 
 # What does this pipeline do?
-This pipeline forecasts data and is divided into six steps that are all automated:
+This pipeline forecasts data and is divided into six steps that are all automated.
 
 # Extract Transport Load (ETL)  
 

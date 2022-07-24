@@ -13,7 +13,7 @@ time-series feature engineering, train an SKLearn machine learning model, and fo
 </H5>
 
 <p align="center">
-<img width="460" height="300" src= ![Untitled Diagram drawio(1)](https://user-images.githubusercontent.com/68968629/180633776-b4db0ec0-0ebf-4b37-a432-448c9587b0f9.png)
+<img width="460" height="300" src= https://github.com/geetpurohit/DAPS/blob/main/architecture.png
 </p>
 
 # Introduction 

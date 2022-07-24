@@ -40,7 +40,7 @@ This pipeline forecasts data and is divided into six steps that are all automate
 
 # Extract Transport Load (ETL)  
 
-First we take the data and clean it up to only take values of interest. Additionally we will also index it by datetime. For our example, the data will now look like (this data below only has 1 column. Do you understand why?):
+First we take the data and clean it up to only take values of interest. Additionally we will also index it by datetime. For our example, the data will now look like:
 <pre>
 <code>
                     Value 

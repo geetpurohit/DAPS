@@ -10,7 +10,9 @@
 <H5 align="center">
      An automated pipeline that can load a time series-esque database and perform data-drift analysis, visualize EDA/ETL insights, perform
 time-series feature engineering, train an SKLearn machine learning model, and forecast data.
-</H5>![Untitled Diagram drawio(1)](https://user-images.githubusercontent.com/68968629/180628463-e09048af-07e2-459e-88e3-8d39888cabfb.png)
+</H5>
+
+![Untitled Diagram drawio(1)](https://user-images.githubusercontent.com/68968629/180633776-b4db0ec0-0ebf-4b37-a432-448c9587b0f9.png)
 
 
 # Introduction 

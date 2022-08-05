@@ -115,4 +115,6 @@ Lastly we use the trained machine learning model for predictive analysis. Since 
 </pre>
      
 The pipeline also makes plots for each data point predicted, plots them in a different color to assert distinction of past values versus future values, and outputs it as a gif as well: 
+     
+     
 ![ezgif com-gif-maker(4)](https://user-images.githubusercontent.com/68968629/182977505-af912b37-da06-4995-8b8c-ef3730a97577.gif)
